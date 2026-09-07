@@ -6,6 +6,6 @@ Comment=Blue variant of the Aerobird GTK and XFWM theme
 [X-GNOME-Metatheme]
 GtkTheme=Aerobird-Blue
 MetacityTheme=Aerobird-Blue
-IconTheme=Win2-7Libre
+IconTheme=Windows-7
 CursorTheme=aero-drop
 ButtonLayout=menu:minimize,maximize,close
