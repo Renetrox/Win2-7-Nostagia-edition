@@ -1,4 +1,5 @@
 # Win2-7 Nostalgia Edition
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c0e33c0e-d205-41dd-a9a6-7eb816ea69cb" />
 
 Recuperación moderna para XFCE del clásico **Win2-7 Pack**, con una instalación legible y reversible.
 
