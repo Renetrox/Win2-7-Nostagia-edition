@@ -32,9 +32,10 @@ To install and activate the default profile:
 
 The default profile uses:
 
-- GTK/XFWM theme: `Aerobird`
+- GTK/XFWM theme: `Aerobird-Blue`
 - icons: `Windows-7`
 - cursor: `aero-drop`
+- Angujanú menu: `Win2-7Blue` (when Angujanú is already installed)
 - wallpaper: `Win2-7.jpg`
 
 Select the blue variant or the other icon archive:
