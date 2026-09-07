@@ -1,86 +1,96 @@
 # Win2-7 Nostalgia Edition
 
-A modern XFCE-oriented revival of the classic **Win2-7 Pack**.
+Recuperación moderna para XFCE del clásico **Win2-7 Pack**, con una instalación legible y reversible.
 
-This repository preserves the recognizable Windows 7-era Linux desktop style while replacing the original Ubuntu/GNOME 2 installer with a small, auditable installer for current XFCE desktops.
+> Estado: restauración en desarrollo. Pruébala primero en una cuenta secundaria.
 
-> Status: early restoration. Test in a secondary user account before applying the theme to a daily desktop.
+## Incluye
 
-## Included
+- Temas **Aerobird** y **Aerobird-Blue** para GTK 2, GTK 3, GTK 4 y XFWM4.
+- Tema de iconos moderno **Windows-7** y archivos históricos **Win2-7Libre** y **Win2-7**.
+- Cursores **aero-drop**, sonidos FreeDesktop y fondo clásico.
+- Temas Win2-7 para [Angujanú](https://github.com/Renetrox/Angujanu).
+- Perfil opcional de panel con **Kesú + Docklike**, bandeja, volumen, reloj y mostrar escritorio.
 
-- **Aerobird** and **Aerobird-Blue** themes with GTK 2, GTK 3, GTK 4 and XFWM4 support.
-- **Windows-7** modern icon theme, plus the historical **Win2-7Libre** and **Win2-7** archives.
-- **aero-drop** cursor theme.
-- Win2-7 FreeDesktop sound theme.
-- Classic wallpapers.
-- Original GnoMenu menu/button/icon/sound themes for use with [Angujanú](https://github.com/Renetrox/Angujanu).
+El perfil no contiene datos personales, redes, clima ni lanzadores fijados.
 
-## Install
+## Instalación recomendada
 
 ```bash
 chmod +x install.sh uninstall.sh
+./install.sh --full
+```
+
+`--full` instala los recursos locales, activa la apariencia, intenta instalar Angujanú, Kesú y Docklike, aplica el panel y lo reinicia al final. Antes de modificar el panel crea una copia de seguridad.
+
+Valores predeterminados:
+
+- GTK/XFWM: `Aerobird-Blue`
+- iconos: `Windows-7`
+- cursor: `aero-drop`
+- menú Angujanú: `Win2-7Blue`
+- fondo: `Win2-7.jpg`
+
+## Otros modos
+
+```bash
 ./install.sh
 ```
 
-This installs the assets for the current user without changing the active XFCE appearance.
-
-To install and activate the default profile:
+Instala solamente los recursos. Si se ejecuta desde una terminal y hay Internet, pregunta si deseas añadir Angujanú, Kesú y Docklike.
 
 ```bash
 ./install.sh --apply
+./install.sh --offline --apply
+./install.sh --panel
+./install.sh --apply --theme Aerobird --icons Win2-7Libre
 ```
 
-The default profile uses:
+- `--apply`: activa apariencia y fondo; si los complementos ya existen, ofrece aplicar el panel.
+- `--offline`: no consulta ni descarga nada.
+- `--panel`: aplica el perfil del panel únicamente si Kesú y Docklike están disponibles.
+- `--theme` y `--icons`: seleccionan variantes.
 
-- GTK/XFWM theme: `Aerobird-Blue`
-- icons: `Windows-7`
-- cursor: `aero-drop`
-- Angujanú menu: `Win2-7Blue` (when Angujanú is already installed)
-- wallpaper: `Win2-7.jpg`
+En Debian, Docklike se instala desde `apt` cuando el paquete `xfce4-docklike-plugin` está disponible. En versiones que no lo incluyen, el instalador intenta compilarlo desde su [repositorio oficial](https://github.com/nsz32/docklike-plugin).
 
-Select the blue variant or the other icon archive:
+## Qué muestra el instalador
 
-```bash
-./install.sh --apply --theme Aerobird-Blue
-./install.sh --apply --icons Win2-7Libre
-```
+Cada etapa se informa por separado: temas GTK, XFWM, iconos, cursores, sonidos, fondo, Angujanú, Kesú, Docklike y panel. Los elementos que no pudieron completarse aparecen como `[PENDIENTE]`, sin ocultar una instalación parcial.
 
-The installer copies the classic GnoMenu themes into an existing Angujanú installation when `~/.local/share/xfcemenu/themes` is present. It does not install Angujanú automatically.
-
-## Uninstall
+## Desinstalación
 
 ```bash
 ./uninstall.sh
 ```
 
-The uninstaller removes only the paths installed by this edition. If `--apply` was used, it restores the XFCE settings recorded immediately before the first activation.
+Elimina los recursos propios de esta edición y restaura la apariencia, los fondos y el panel guardados antes de la primera activación. Angujanú, Kesú y Docklike se conservan porque son proyectos independientes y pueden estar siendo usados por otra configuración.
 
-## Requirements
+## Requisitos
 
-- XFCE on Linux
-- `xfconf-query` only when using `--apply`
-- `tar` with bzip2 support
+- Linux con XFCE
+- `xfconf-query` para activar la apariencia
+- `tar` con bzip2
+- Internet, `git`, compilador y `sudo` solamente para la experiencia completa
 
-No root privileges, Python 2, GConf, GNOME Panel, Compiz or Emerald are required.
+No se requieren Python 2, GConf, GNOME Panel, Compiz ni Emerald.
 
-## Project layout
+## Estructura
 
 ```text
 Files/
-├── gtk3-theme/     Aerobird GTK/XFWM themes
-├── icon-theme/     modern theme and historical icon archives
-├── cursor/         cursor theme
-├── sounds/         FreeDesktop sound theme
-├── backgrounds/    wallpapers
-└── gnomenu/        legacy themes consumed by Angujanú
+├── gtk3-theme/     temas Aerobird GTK/XFWM
+├── icon-theme/     iconos modernos e históricos
+├── cursor/         cursores
+├── sounds/         tema de sonidos
+├── backgrounds/    fondos
+├── gnomenu/        recursos para Angujanú
+└── panel/          perfil XFCE portátil
 ```
 
-## Historical note
+## Nota histórica
 
-The original Win2-7 Pack targeted Ubuntu and GNOME 2 and modified many system components. Its Python 2 installer and uninstaller have intentionally been removed from the active tree because they are incompatible with current distributions and performed unsafe system-wide operations. They remain available in the repository history.
+El instalador original estaba dirigido a Ubuntu y GNOME 2 y modificaba numerosos componentes del sistema. Su código Python 2 y las operaciones globales inseguras fueron retirados del árbol activo; continúan disponibles en el historial del repositorio.
 
-## Licensing and credits
+## Licencias y créditos
 
-Win2-7 Nostalgia Edition combines assets originating from the historical Win2-7 Pack and later theme work. Rights and licenses for every inherited asset still need to be documented individually before producing a formal release. Do not assume that every file shares one license.
-
-Angujanú and Kesú are separate projects and are not bundled here.
+Esta edición combina material del Win2-7 Pack histórico y trabajos posteriores. Las licencias de cada recurso heredado deben documentarse individualmente antes de una publicación formal. Angujanú, Kesú y Docklike son proyectos separados y no se incluyen dentro de este repositorio.
