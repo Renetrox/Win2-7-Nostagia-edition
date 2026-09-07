@@ -1,0 +1,15 @@
+[user]
+pinned=
+indicatorStyle=2
+inactiveIndicatorStyle=0
+indicatorOrientation=0
+indicatorColor=rgb(255,255,255)
+inactiveColor=rgb(153,193,241)
+showWindowCount=true
+showPreviews=true
+noWindowsListIfSingle=false
+onlyDisplayVisible=true
+onlyDisplayScreen=false
+indicatorColorFromTheme=false
+forceIconSize=true
+iconSize=32
