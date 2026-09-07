@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-rm -rf     "$HOME/.themes/Aerobird"     "$HOME/.themes/Aerobird-Blue"     "$HOME/.icons/Win2-7"     "$HOME/.icons/Win2-7Libre"     "$HOME/.icons/aero-drop"     "$HOME/.local/share/sounds/Win2-7"     "$HOME/.local/share/backgrounds/win2-7-nostalgia"
+rm -rf     "$HOME/.themes/Aerobird"     "$HOME/.themes/Aerobird-Blue"     "$HOME/.icons/Windows-7"     "$HOME/.icons/Win2-7"     "$HOME/.icons/Win2-7Libre"     "$HOME/.icons/aero-drop"     "$HOME/.local/share/sounds/Win2-7"     "$HOME/.local/share/backgrounds/win2-7-nostalgia"
 
 STATE_DIR="$HOME/.config/win2-7-nostalgia"
 STATE_FILE="$STATE_DIR/xfce-before-install"
