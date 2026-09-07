@@ -7,7 +7,7 @@ Recuperación moderna para XFCE del clásico **Win2-7 Pack**, con una instalaci�
 
 ## Incluye
 
-- Temas **Aerobird** y **Aerobird-Blue** para GTK 2, GTK 3, GTK 4 y XFWM4.
+- Temas **Aerobird** y **Aerobird-Blue** para GTK 2, GTK 3, GTK 4 y XFWM4; **Aerobird** es el perfil predeterminado por ser el más cercano al Win2-7 original.
 - Tema de iconos moderno **Windows-7** y archivos históricos **Win2-7Libre** y **Win2-7**.
 - Cursores **aero-drop**, sonidos FreeDesktop y fondo clásico.
 - Temas Win2-7 para [Angujanú](https://github.com/Renetrox/Angujanu).
@@ -26,7 +26,7 @@ chmod +x install.sh uninstall.sh
 
 Valores predeterminados:
 
-- GTK/XFWM: `Aerobird-Blue`
+- GTK/XFWM: `Aerobird`
 - iconos: `Windows-7`
 - cursor: `aero-drop`
 - menú Angujanú: `Win2-7Blue`
