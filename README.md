@@ -92,6 +92,17 @@ Files/
 
 El instalador original estaba dirigido a Ubuntu y GNOME 2 y modificaba numerosos componentes del sistema. Su código Python 2 y las operaciones globales inseguras fueron retirados del árbol activo; continúan disponibles en el historial del repositorio.
 
+## Créditos
+
+- **Juan de Jesús (juandejesuss)**: creador del Win2-7 Pack original,
+  cuya idea, recursos y experiencia de transformación inspiran esta edición.
+- **jmoney777**: creador de AeroBird y AeroBird-Blue para XFCE.
+- **B00merang Artwork**: adaptación y mantenimiento moderno del tema
+  de iconos Windows-7 basado en los iconos originales de Win2-7.
+- **nsz32 y colaboradores**: desarrollo de Docklike Taskbar.
+- **Renetrox**: restauración, adaptación para XFCE e integración con
+  Angujanú y Kesú.
+  
 ## Licencias y créditos
 
 Esta edición combina material del Win2-7 Pack histórico y trabajos posteriores. Las licencias de cada recurso heredado deben documentarse individualmente antes de una publicación formal. Angujanú, Kesú y Docklike son proyectos separados y no se incluyen dentro de este repositorio.
