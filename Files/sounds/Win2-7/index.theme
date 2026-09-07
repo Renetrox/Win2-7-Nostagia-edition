@@ -1,0 +1,6 @@
+[Sound Theme]
+Name=Win2-7
+Directories=stereo
+
+[stereo]
+OutputProfile=stereo

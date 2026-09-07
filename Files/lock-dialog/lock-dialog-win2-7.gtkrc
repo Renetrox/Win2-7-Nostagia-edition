@@ -1,0 +1,300 @@
+# 
+# Win2-7 Lock Screen Theme
+#
+# Author: Anton Kerezov <ankere@gmail.com>
+#
+# Modified by: juandejesuss 
+#
+# Feel free to modify and share!
+
+
+# The main backgroud
+style "window"
+{
+	#This has to be back to not disturb the eye 
+	# when loading images on slower PC's
+	bg[NORMAL] = "Black"
+
+	engine "pixmap" {
+		image {
+			file = "win2-7-images/newwave_bg.png"
+			function = FLAT_BOX
+			stretch = TRUE
+			border = { 0, 0, 0, 0 } 
+		}
+	}
+}
+
+style "label-black"
+{
+	fg[NORMAL] = "#171D4F"
+	fg[PRELIGHT] = "#171D4F"
+	fg[ACTIVE] = "#171D4F"
+}
+style "label-white"
+{
+	fg[NORMAL] = "White"
+	fg[PRELIGHT] = "White"
+	fg[ACTIVE] = "White"
+}
+
+style "label-midtone"
+{
+	#this is compromise variant
+	fg[NORMAL] = "#171D4F"
+	fg[PRELIGHT] = "#000"
+	fg[ACTIVE] = "#171D4F"
+}
+
+
+# Special buttons without shadows and more contrast to match the theme
+style "button" = "label-black"
+{
+	fg[NORMAL] = "#171D4F"
+	fg[PRELIGHT] = "#171D4F"
+	fg[ACTIVE] = "#171D4F"
+
+	GtkButton::interior_focus = TRUE
+
+	GtkWidget::focus_padding = 0
+	GtkButton::focus_width = 1
+	GtkButton::displace_focus = TRUE
+	
+	# The default is ok
+	#GtkButton::child_displacement_x = 1
+	#GtkButton::child_displacement_y = 1
+	
+	# Increase because focus padding is zero
+	GtkButton::inner-border =  {2, 2, 2, 2}
+	# Use to show glow around default buttons
+	GtkButton::default-border = { 3, 3, 3, 3}
+	GtkButton::default-outside-border = { 3, 3, 3, 3}
+
+	engine "pixmap"
+	{
+	
+	image
+	{
+		function		= FOCUS
+		recolorable		= TRUE
+		file			= "win2-7-images/button-focus.png"
+		border			= {4, 4, 4, 4}
+		stretch			= TRUE
+	}
+	
+	image 
+	{
+		function		= BOX
+		state			= NORMAL
+		shadow			= OUT
+		file			= "win2-7-images/button-normal.png"		
+		border			={ 4, 4, 4, 4 }
+		stretch			= TRUE
+	}
+
+	#Used for default buttons glow
+	image 
+	{
+		function		= BOX
+		state			= NORMAL
+		shadow			= IN
+		file			= "win2-7-images/button-default.png"		
+		border			={ 4, 4, 4, 4 }
+		stretch			= TRUE
+	}
+	
+	image
+	{
+		function		= BOX
+		state			= ACTIVE
+		file			= "win2-7-images/button-pressed.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+	}
+	
+	image
+	{
+		function		= BOX
+		recolorable		= TRUE
+		detail			= "buttondefault"
+		file			= "win2-7-images/button-default.png"
+		border			= {4, 4, 4, 4}
+		stretch			= TRUE
+	}
+	
+	#@author:dilomo@ prelight used on toggle buttons when they are pressed in
+	image
+	{
+		function		= BOX
+		state			= PRELIGHT
+		recolorable		= TRUE
+		shadow			= IN
+		file			= "win2-7-images/button-pressed-prelight.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+	}
+	#@author:dilomo@ prelight used on normal buttons
+	image
+	{
+		function		= BOX
+		state			= PRELIGHT
+		recolorable		= TRUE
+		shadow			= OUT
+		file			= "win2-7-images/button-prelight.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+	}
+	
+	image 
+	{
+		function		= BOX
+		state			= INSENSITIVE
+		shadow			= IN
+		file			= "win2-7-images/button-insensitive-in.png"	
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+	}
+	image 
+	{
+		function		= BOX
+		state			= INSENSITIVE
+		shadow			= OUT
+		file			= "win2-7-images/button-insensitive.png"	
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+	}	
+    	}
+}
+
+#Fix white pixels at corners by using a modified image
+style "textbox"
+{
+
+	fg[NORMAL] = "#171D4F"
+	fg[PRELIGHT] = "#171D4F"
+	fg[ACTIVE] = "#171D4F"
+
+	engine "pixmap"
+	{
+	image
+    		{ 
+	     	function		= SHADOW
+	    	detail			= "entry"
+	    	shadow			= IN
+	    	recolorable		= FALSE
+	    	file			= "win2-7-images/entry-shadow-in.png"
+	    	border			= { 2,2,3,3 }
+	    	stretch			= TRUE
+    		}
+	}
+}
+
+style "hbox"
+{
+	fg[NORMAL] = "White"
+	fg[PRELIGHT] = "White"
+	fg[ACTIVE] = "White"
+	bg_pixmap[NORMAL] = "win2-7-images/btn_lang.png"
+}
+
+style "username"
+{
+	# e.g. Don Juan Tenorio
+	fg[NORMAL] = "White"
+	fg[PRELIGHT] = "White"
+	fg[ACTIVE] = "White"
+}
+style "pcnickname"
+{
+	# e.g. Don Juan Tenorio on PC
+	fg[NORMAL] = "#fff"
+	fg[PRELIGHT] = "#fff"
+	fg[ACTIVE] = "#fff"
+}
+style "statusmsg"
+{
+	# warnigs
+	fg[NORMAL] = "#FFE400"#142077"
+	fg[PRELIGHT] = "#FFE400"#142077"
+	fg[ACTIVE] = "#FFE400"#142077"
+}
+
+
+style "theme-button"
+{
+
+  engine "pixmap"
+  {
+    image
+    {
+      function			= BOX
+      detail				= "buttondefault"
+      recolorable		= TRUE
+      file				= "win2-7-images/button-default.png"
+      border			= {4, 4, 4, 4}
+      stretch			= TRUE
+    }
+    image
+    {
+      function			= BOX
+      state				= PRELIGHT
+      recolorable		= TRUE
+      file				= "win2-7-images/button-prelight.png"
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
+    }
+    image
+    {
+      function			= BOX
+      state				= ACTIVE
+      file				= "win2-7-images/button-pressed.png"
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
+    }	
+    image 
+   {
+     function			= BOX
+     state				= INSENSITIVE
+     file					= "win2-7-images/button-insensitive.png"
+     border			= { 4, 4, 4, 4 }
+     stretch			= TRUE
+    }
+    image 
+    {
+      function			= BOX
+      file				= "win2-7-images/button-normal.png"		
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
+    }	
+  }
+}
+
+
+
+class "GtkWindow" style "window"
+#class "GtkHBox" style "hbox"
+class "GtkButton" style "theme-button"
+
+# On leav a message window the label text 
+# is black but don't know how to fix it.
+# Temporary solution
+class "GtkLabel" style "label-midtone"
+
+# Customize the widgets
+widget "*auth-prompt-entry" style "textbox"
+widget "*auth-prompt-label" style "label-black"
+widget "*auth-realname-label" style "username"
+widget "*auth-username-label" style "pcnickname"
+widget "*away-message-label" style "pcnickname"
+widget "*auth-capslock-label" style "pcnickname"
+widget "*auth-status-label" style "statusmsg"
+
+widget "*auth-prompt-kbd-layout-indicator.*" style "hbox"
+widget "*auth-prompt-kbd-frame" style "hbox"
+
+#widget "*auth-action-area.*" style :highest "label-black"
+
+
+
+
+

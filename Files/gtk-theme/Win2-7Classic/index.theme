@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Win2-7Classic
+Comment="Win2-7 Classic Appearance"
+Encoding=UTF-8
+
+Name[en_US]=Win2-7Classic
+
+[X-GNOME-Metatheme]
+GtkTheme=Win2-7Classic
+MetacityTheme=Win2-7Classic
+IconTheme=Win2-7
+CursorTheme=aero-drop
+ButtonLayout=menu:minimize,maximize,close

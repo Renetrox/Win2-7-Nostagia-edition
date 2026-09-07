@@ -1,0 +1,99 @@
+<theme name = "Shinybar1.3 Vertical">
+<!--
+	Created by Alex Kaehler
+	Licensed under a Creative Commons Atribution-Share Alike 3.0 License
+	creaticecommons.org
+
+	NOTE: This theme is optimized for a 62px wide vertical taskbar.
+-->
+<pixmaps>
+	<pixmap_from_file name="button-launcher-vert" file="button-launcher-vert.png" />
+	<pixmap_from_file name="button-normal" file="button-normal.png" />
+	<pixmap_from_file name="glow-large" file="glow-large.png" />
+	<pixmap_from_file name="glow-small" file="glow-small.png" />
+	<pixmap_from_file name="mask-inlay" file="mask-inlay.png" />
+	<pixmap_from_file name="mask-main" file="mask-main.png" />
+	<pixmap_from_file name="mask-mouseover" file="mask-mouseover.png" />
+	<pixmap_from_file name="mask-shadow" file="mask-shadow.png" />
+</pixmaps>
+
+<button_pixmap gap = "2" aspect_ratio="2/3">
+	<get_icon size="-28" />
+	<if type="all_minimized">
+		<transp_sat opacity="40" saturation="70" />
+	</if>
+	<if type="some_minimized">
+		<pixmap_from_self name="greyed">
+			<transp_sat opacity="40" saturation="70" />
+		</pixmap_from_self>
+		<combine degrees="90" pix1="self" pix2="greyed" />
+	</if>
+
+<!-- Important Stuff -->
+	<correct_size />
+	<if type="!launcher">
+		<if type="!active">
+			<composite bg="button-normal" fg="self" />
+		</if>
+		<if type="active">
+			<glow color="#000000" opacity="30" />
+			<pixmap name="active_bg">
+				<fill color="#FFFFFF" opacity="35" />
+				<alpha_mask mask="mask-main" />
+			</pixmap>
+			<pixmap name="active_shadow">
+				<fill color="#000000" opacity="100" />
+				<alpha_mask mask="mask-shadow" />
+				<alpha_mask mask="mask-main" />
+			</pixmap>
+			<composite bg="button-normal" fg="self" />
+			<composite bg="active_bg" fg="self" />
+			<composite bg="active_shadow" fg="self" />
+		</if>
+	</if>
+	<if type="mouse_over">
+		<if type="launcher">
+			<composite bg="self" fg="button-launcher-vert" opacity="45" />
+			<composite bg="self" fg="glow-small" opacity="70" />
+		</if>
+		<if type="!launcher">
+			<pixmap name="bg_glow">
+				<fill color="active_color" opacity="active_opacity" />
+				<alpha_mask mask="mask-main" />
+				<alpha_mask mask="mask-mouseover" />
+			</pixmap>
+			<pixmap name="bg_weakglow">
+				<fill color="active_color" opacity="0" />
+				<alpha_mask mask="mask-main" />
+				<alpha_mask mask="mask-mouseover" />
+			</pixmap>
+			<pixmap name="bg_inlay">
+				<fill color="active_color" opacity="active_opacity" />
+				<alpha_mask mask="mask-inlay" />
+			</pixmap>
+			<composite bg="bg_inlay" fg="self" />
+			<composite bg="glow-large" fg="self" />
+			<composite bg="bg_weakglow" fg="self" />
+			<composite bg="bg_glow" fg="self" />
+		</if>
+	</if>
+
+<!-- End important stuff-->
+	<if type="blink">
+		<pixmap name="red">
+			<fill color="#FF9900" opacity="80" />
+				<!--yellow-orange color -->
+			<alpha_mask mask="mask-main" />
+		</pixmap>
+		<composite bg="red" fg="self" />
+	</if>
+	<if type="needs_attention">
+		<pixmap name="red">
+			<fill color="#FF9900" opacity="80" />
+			<alpha_mask mask="mask-main" />
+		</pixmap>
+		<composite bg="red" fg="self" />
+		
+	</if>
+</button_pixmap>
+</theme>

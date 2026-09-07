@@ -1,0 +1,18 @@
+Win2-7 Lock-Dialog Theme
+
+Installation:
+
+1. Unpack files to /usr/share/gnome-screensaver/
+
+2. Open gconf-editor (Alt+F2, type 'gconf-editor' and press enter) change the entry apps/gnome-screensaver/lock_dialog_theme from 'default' to 'win2-7'
+
+3. Enjoy!
+
+
+To enjoy this theme fully I recommend using a picture of your choice of size 96x96 px. You could change your current one by going to System > Preference > About Me and click on the button besides your name.
+
+If you want to get back you old theme you should do step 3 in reverse: replace 'win2-7' with 'default'
+
+
+Win2-7 Based on New Wave Theme, this pack was build for:
+http://www.gnome-look.org/content/show.php/New+Wave?content=87134
