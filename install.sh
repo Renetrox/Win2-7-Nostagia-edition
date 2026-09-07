@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FILES_DIR="$ROOT_DIR/Files"
-THEME="Aerobird"
+THEME="Aerobird-Blue"
 ICONS="Windows-7"
 APPLY=false
 
@@ -67,6 +67,13 @@ if [ -d "$ANGUJANU_DIR" ] && [ -d "$FILES_DIR/gnomenu/Themes" ]; then
             cp -a "$FILES_DIR/gnomenu/Themes/$kind/." "$ANGUJANU_DIR/$kind/"
         fi
     done
+fi
+
+if "$APPLY" && [ -f "$HOME/.config/xfcemenu/config.ini" ]; then
+    CONFIG_FILE="$HOME/.config/xfcemenu/config.ini"
+    if grep -q '^[[:space:]]*menu_theme[[:space:]]*=' "$CONFIG_FILE"; then
+        sed -i 's/^[[:space:]]*menu_theme[[:space:]]*=.*/menu_theme = Win2-7Blue/' "$CONFIG_FILE"
+    fi
 fi
 
 if "$APPLY"; then
