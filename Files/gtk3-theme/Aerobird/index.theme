@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Aerobird
+Comment=Windows 7-inspired GTK and XFWM theme for XFCE
+
+[X-GNOME-Metatheme]
+GtkTheme=Aerobird
+MetacityTheme=Aerobird
+IconTheme=Win2-7Libre
+CursorTheme=aero-drop
+ButtonLayout=menu:minimize,maximize,close

@@ -1,9 +1,0 @@
-
-COMPUTER_ICON_NAME="Computer"
-RECYCLEBIN_ICON_NAME="Recycle Bin"
-NETWORK_ICON_NAME="Network"
-
-#WORD1=("GPL/Libre","Win2-7Libre")
-#WORD2=("Microsoft","Win2-7")
-
-INT="LOADED" # << DO NOT TRANSLATE THIS LINE

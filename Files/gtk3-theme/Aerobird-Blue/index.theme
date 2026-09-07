@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Aerobird-Blue
+Comment=Blue variant of the Aerobird GTK and XFWM theme
+
+[X-GNOME-Metatheme]
+GtkTheme=Aerobird-Blue
+MetacityTheme=Aerobird-Blue
+IconTheme=Win2-7Libre
+CursorTheme=aero-drop
+ButtonLayout=menu:minimize,maximize,close
