@@ -42,8 +42,10 @@ done
 
 mkdir -p "$HOME/.themes" "$HOME/.icons" "$HOME/.local/share/sounds"
 mkdir -p "$HOME/.local/share/backgrounds/win2-7-nostalgia"
-rm -rf "$HOME/.themes/$THEME" "$HOME/.icons/aero-drop" "$HOME/.local/share/sounds/Win2-7"
-cp -a "$THEME_SRC" "$HOME/.themes/$THEME"
+rm -rf "$HOME/.themes/Aerobird" "$HOME/.themes/Aerobird-Blue"
+rm -rf "$HOME/.icons/aero-drop" "$HOME/.local/share/sounds/Win2-7"
+cp -a "$FILES_DIR/gtk3-theme/Aerobird" "$HOME/.themes/Aerobird"
+cp -a "$FILES_DIR/gtk3-theme/Aerobird-Blue" "$HOME/.themes/Aerobird-Blue"
 cp -a "$CURSOR_SRC" "$HOME/.icons/aero-drop"
 cp -a "$SOUND_SRC" "$HOME/.local/share/sounds/Win2-7"
 cp -a "$WALLPAPER_SRC" "$HOME/.local/share/backgrounds/win2-7-nostalgia/Win2-7.jpg"
