@@ -9,7 +9,7 @@ This repository preserves the recognizable Windows 7-era Linux desktop style whi
 ## Included
 
 - **Aerobird** and **Aerobird-Blue** themes with GTK 2, GTK 3, GTK 4 and XFWM4 support.
-- **Win2-7Libre** and **Win2-7** icon archives.
+- **Windows-7** modern icon theme, plus the historical **Win2-7Libre** and **Win2-7** archives.
 - **aero-drop** cursor theme.
 - Win2-7 FreeDesktop sound theme.
 - Classic wallpapers.
@@ -33,7 +33,7 @@ To install and activate the default profile:
 The default profile uses:
 
 - GTK/XFWM theme: `Aerobird`
-- icons: `Win2-7Libre`
+- icons: `Windows-7`
 - cursor: `aero-drop`
 - wallpaper: `Win2-7.jpg`
 
@@ -41,7 +41,7 @@ Select the blue variant or the other icon archive:
 
 ```bash
 ./install.sh --apply --theme Aerobird-Blue
-./install.sh --apply --icons Win2-7
+./install.sh --apply --icons Win2-7Libre
 ```
 
 The installer copies the classic GnoMenu themes into an existing Angujanú installation when `~/.local/share/xfcemenu/themes` is present. It does not install Angujanú automatically.
@@ -67,7 +67,7 @@ No root privileges, Python 2, GConf, GNOME Panel, Compiz or Emerald are required
 ```text
 Files/
 ├── gtk3-theme/     Aerobird GTK/XFWM themes
-├── icon-theme/     desktop icon theme archives
+├── icon-theme/     modern theme and historical icon archives
 ├── cursor/         cursor theme
 ├── sounds/         FreeDesktop sound theme
 ├── backgrounds/    wallpapers
