@@ -1,0 +1,35 @@
+#whiskermenu-button {
+    background-image: url("../assets/start_orb_default_36px.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 36px;
+
+    min-width: 36px;
+    min-height: 36px;
+
+    padding: 0;
+    margin: 0 12px 0 7px;
+
+    border: none;
+    box-shadow: none;
+}
+
+#whiskermenu-button:hover {
+    background-image: url("../assets/start_orb_hover_36px.png");
+    transition: 200ms;
+}
+
+#whiskermenu-button:checked {
+    background-image: url("../assets/start_orb_open_36px.png"); 
+}
+
+/*
+#whiskermenu-button:hover image {
+    box-shadow: 0px 0px 6px 0px #99f7ff;
+    border-radius: 24px;
+}
+
+#whiskermenu-button:checked image, #whiskermenu-button:checked.hover image {
+    box-shadow: 0px 0px 6px 0px #70ced6;
+    border-radius: 24px;
+}*/

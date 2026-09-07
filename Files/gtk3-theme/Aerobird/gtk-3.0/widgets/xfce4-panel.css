@@ -1,0 +1,39 @@
+/*XFCE Panel*/
+.xfce4-panel button, #sn-button, #indicator-button {
+    color: #fff;
+    -gtk-icon-shadow: 1px 1px #343434;
+}
+
+.xfce4-panel label {
+    color: #fff;
+}
+
+.xfce4-panel.background {
+    background-image: url("../assets-colored/panel.png");
+    background-repeat: repeat-x;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    text-shadow: 1px 1px #343434;
+}
+
+.xfce4-panel#XfcePanelWindow {
+  border-top-right-radius: 15px; 
+  border-top-right-radius: 0;
+  color: #DDD; /*separator color and workspace preview outline color*/
+}
+
+/* in-panel progress bars */
+.xfce4-panel progressbar {
+	min-width: 4px;
+}
+
+/* for reference
+progressbar { font-size: smaller; color: rgba(0, 0, 0, 0.4); }
+progressbar.horizontal trough, progressbar.horizontal progress { min-height: 20px; }
+progressbar.vertical trough, progressbar.vertical progress { min-width: 20px; }
+progressbar.horizontal progress { margin: 0 -1px; }
+progressbar.vertical progress { margin: -1px 0; }
+progressbar trough { box-shadow: none; padding: 2px; }
+progressbar.vertical trough { background-image: linear-gradient(to right, #ced2dc, #e0e4ed); padding: 2px; }
+*/

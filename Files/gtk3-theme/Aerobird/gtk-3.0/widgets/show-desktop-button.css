@@ -1,0 +1,26 @@
+#showdesktop-button{
+    background-image: linear-gradient(to bottom, 
+				      rgba(255,255,255,0.5), 
+				      rgba(255,255,255,0) 33.75%),
+		      linear-gradient(to bottom,
+                                      rgba(0,0,0,0.375),
+                                      rgba(0,0,0,0.0625) 100%);
+    border: 1px solid rgba(0,0,0,0.375);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.325) inset;
+    margin: 0;
+    border-radius: 0;
+    margin-left: 20px;
+    transition: 500ms;
+}
+
+#showdesktop-button image {
+    opacity: 0;
+    margin: -20px;
+}
+
+#showdesktop-button:hover {
+    background-image: linear-gradient(to bottom, 
+				      rgba(255,255,255,0.5), 
+				      rgba(255,255,255,0) 25%),
+        		      linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0.25) 100%);
+}

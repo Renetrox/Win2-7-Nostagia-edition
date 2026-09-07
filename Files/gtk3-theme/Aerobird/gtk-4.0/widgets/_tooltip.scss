@@ -1,0 +1,32 @@
+tooltip {
+  &.background {
+    // background-color needs to be set this way otherwise it gets drawn twice
+    // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
+    background-color: transparentize(black, 0.2);
+    background-clip: padding-box;
+    background-image: linear-gradient(to bottom,
+                                  #ffff8a, 
+                                  #fff28c 50%,
+                                  #ffeb91 51%,
+                                  #ffe898);
+    box-shadow: inset 0 1px #ffffd4,
+                inset 0 -1px #ffffd4,
+                inset 1px 0 #ffffd4,
+                inset -1px 0px #ffffd4;
+    background-clip: padding-box;
+    border: 1px solid #934d2a; // this suble border is meant to
+                                              // not make the tooltip melt with
+                                              // very dark backgrounds
+   
+    color: $fg_color;
+
+  }
+
+  padding: 6px 10px;
+  border-radius: 3px;
+  box-shadow: none; // otherwise it gets inherited by windowframe.csd
+
+  > box {
+    border-spacing: 6px;
+  }
+}

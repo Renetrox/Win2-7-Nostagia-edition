@@ -1,0 +1,41 @@
+decoration {
+    border-radius: 2px 2px 2px 2px;
+    border-width: 0px;
+    box-shadow:
+        /* x, y, blur, spread, color */
+        0px 0px 7px 1px #000000, /* shadow */
+        0px 0px 0px 3px #343434, /* outline */ 
+        0px 0px 0px 2px #ffffff, /* shine */
+        0px 0px 0px 1px #b9d1ea; /* base color*/
+    margin: 10px;
+}
+
+decoration:backdrop {
+    box-shadow:
+        /* x, y, blur, spread, color */
+        0px 0px 7px 1px #000000, /* shadow */
+        0px 0px 0px 3px #4c4c4c, /* outline */ 
+        0px 0px 0px 2px #e9ecf3, /* shine */
+        0px 0px 0px 1px #d7e4f2; /* base color*/
+}
+
+.background .titlebar {
+    background-image: linear-gradient(to bottom, #98b4d0, #dce8f4 97%, #ffffff 98%, #ffffff);
+    background-color: #E8ECF6;
+    border-bottom: 1px solid #98b4d0;
+    color: #000000;
+
+}
+
+.titlebar:backdrop {
+    background-image: linear-gradient(to bottom, #bfcddb, #e2e6ef 97%, #ffffff 98%, #ffffff);
+    background-color: #E8ECF6;
+    border-bottom: 1px solid #bfcddb;
+    color: #000000;
+}
+
+.background.tiled .titlebar, .background.tiled-top .titlebar, .background.tiled-right .titlebar, .background.tiled-bottom .titlebar, .background.tiled-left .titlebar, .background.maximized .titlebar, .background.solid-csd .titlebar {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+

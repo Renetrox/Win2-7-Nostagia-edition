@@ -1,0 +1,132 @@
+// blx addin
+@mixin progressbar_fill($d:horizontal) {
+  $dir: if($d==vertical,right,bottom);
+  $dir_2: if($d==vertical,top,left);
+// @include progress_fill(vertical);
+  background-image:    linear-gradient(to $dir,
+                        transparentize(#e2f1cb, 0.4),
+                        transparentize(#e2f1cb, 0.7) 50%,
+                        transparentize(#e2f1cb, 1.0) 51%,
+                        transparentize(#e2f1cb, 1.0)),
+                    linear-gradient(to $dir_2,
+                    transparentize(#D8F4A5, 0.1),  
+                    transparentize(#D2F39A, 0.1) 2%,  
+                    transparentize(#C5ED7F, 0.1) 8%,  
+                    transparentize(#BCEB6D, 0.1) 10%,  
+                    transparentize(#B5E860, 0.1) 13%,  
+                    transparentize(#AEE551, 0.1) 16%,  
+                    transparentize(#A9E345, 0.1) 18%,  
+                    transparentize(#A3E039, 0.1) 21%,  
+                    transparentize(#9DDD2D, 0.1) 24%,   
+                    transparentize(#92D815, 0.1) 29%, 
+                    transparentize(#8DD609, 0.1) 32%, 
+                    transparentize(#6DB800, 0.1) 62%, 
+                    transparentize(#69B200, 0.1) 67%, 
+                    transparentize(#63A600, 0.1) 78%,  
+                    transparentize(#61A000, 0.1) 82%, 
+                    transparentize(#5B9200, 0.1));
+                                
+}
+
+
+progressbar {
+  // sizing
+  &.horizontal {
+    > trough {
+      min-width: 150px;
+      &, > progress { min-height: 20px; }
+    }
+  }
+
+  &.vertical {
+    > trough {
+      min-height: 80px;
+      &, > progress { min-width: 20px; }
+    }
+  }
+
+  > text {
+    @extend .dim-label;
+    @extend .numeric;
+    font-size: smaller;
+  }
+
+  &:disabled {
+    filter: opacity($disabled_opacity);
+  }
+
+  > trough {
+                            border-radius: 2px;
+
+    @extend %scale_trough;
+                  border: 1px solid $borders_color;
+                        border-radius: 2px;
+
+
+    > progress {
+          @include progressbar_fill;
+      $_progress-radius: 2px;
+              border: 1px solid $borders_color;
+      border-radius: $_progress-radius;
+
+      &.left {
+              @include progressbar_fill;
+        border-top-left-radius: $_progress-radius;
+        border-bottom-left-radius: $_progress-radius;
+      }
+
+      &.right {
+        @include progressbar_fill;
+        border-top-right-radius: $_progress-radius;
+        border-bottom-right-radius: $_progress-radius;
+      }
+
+      &.top {
+        @include progressbar_fill (vertical);
+        border-top-right-radius: $_progress-radius;
+        border-top-left-radius: $_progress-radius;
+      }
+
+      &.bottom {
+        @include progressbar_fill (vertical);
+        border-bottom-right-radius: $_progress-radius;
+        border-bottom-left-radius: $_progress-radius;
+      }
+    }
+  }
+
+  &.osd {
+    // Thin progress bar with no trough, usually goes under the header bar
+    min-width: 2px;
+    min-height: 2px;
+    background-color: transparent;
+    color: inherit;
+
+    > trough {
+      border-style: none;
+      border-radius: 0;
+      background-color: transparent;
+      box-shadow: none;
+
+      > progress {
+        border-style: none;
+        border-radius: 0;
+      }
+
+    }
+
+    &.horizontal {
+      > trough, > trough > progress { min-height: 2px; }
+    }
+
+    &.vertical {
+      > trough, > trough > progress { min-width: 2px; }
+    }
+  }
+
+  > trough.empty > progress { all: unset; } // makes the progress indicator disappear, when the fraction is 0
+
+  .osd & > trough > progress {
+    background-color: $osd_fill_bg_color;
+  }
+}

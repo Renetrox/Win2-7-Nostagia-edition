@@ -1,0 +1,8 @@
+active_text_color=#ffffff
+inactive_text_color=#f8f8f8
+active_text_shadow_color=#0a1883
+title_alignment=left
+title_shadow_active=true
+title_shadow_inactive=true
+show_app_icon=true
+button_offset=-2

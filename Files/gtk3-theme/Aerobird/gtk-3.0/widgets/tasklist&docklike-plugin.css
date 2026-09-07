@@ -1,0 +1,125 @@
+.tasklist button, #docklike-plugin .open_group {
+    background-image:
+        radial-gradient(ellipse 140% 90% at 0% 0%,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,0.28) 50%,
+            rgba(0,0,0,0) 70%),
+        linear-gradient(to bottom,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) 50%,
+            rgba(0,0,0,0) 60%,
+            rgba(0,0,0,0) 100%);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.375) inset;
+}
+
+.tasklist button:hover, button.sidebar-button:hover, button.flat:hover, #docklike-plugin .hover_group {
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-duration: 500ms;
+}
+
+.tasklist button:hover:active, button.sidebar-button:hover:active, button.flat:hover:active, #docklike-plugin .active_group {
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tasklist button:hover, #docklike-plugin .hover_group.open_group {
+    background-image:
+        radial-gradient(ellipse 200% 140% at 0% 0%,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,0.28) 50%,
+            rgba(0,0,0,0) 70%),
+        radial-gradient(ellipse 200% 140% at 100% 100%,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,0.28) 20%,
+            rgba(0,0,0,0) 35%),
+        linear-gradient(to bottom,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) 50%,
+            rgba(0,0,0,0) 60%,
+            rgba(0,0,0,0) 100%);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.375) inset;
+    -gtk-icon-effect: highlight;
+}
+
+.tasklist button:active, button:checked, #docklike-plugin .active_group {
+    background-image:
+        radial-gradient(ellipse 300% 225% at 15% 15%,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,0.28) 50%,
+            rgba(0,0,0,0) 70%),
+        linear-gradient(to bottom,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) 50%,
+            rgba(0,0,0,0) 60%,
+            rgba(0,0,0,0) 100%);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.375) inset;
+    -gtk-icon-effect: highlight;
+}
+
+#docklike-plugin .active_group.hover_group {
+    background-image:
+        radial-gradient(ellipse 300% 225% at 15% 15%,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,0.28) 50%,
+            rgba(0,0,0,0) 70%),
+        radial-gradient(ellipse 200% 140% at 100% 100%,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,0.28) 20%,
+            rgba(0,0,0,0) 35%),
+        linear-gradient(to bottom,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) 50%,
+            rgba(0,0,0,0) 60%,
+            rgba(0,0,0,0) 100%);
+}
+
+* {
+   -XfceTasklist-minimized-icon-lucency: 100;
+}
+
+.tasklist image { 
+	/* padding-left: 6px; */
+	-gtk-icon-transform: scale(1.0);
+}
+
+.tasklist image:only-child { 
+	/* padding-left: 6px; */
+	margin: 6px !important;
+	-gtk-icon-transform: scale(1);
+}
+
+.tasklist image:not(:only-child) { 
+	margin-left: 6px;
+}
+
+.tasklist label { 
+	margin: 0;
+	padding: 0;
+}
+
+.tasklist button { 
+	padding-top: 3px;
+	padding-bottom: 3px;
+	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/* docklike specific */
+#docklike-plugin button {
+    min-width: 46px;
+}
+
+#docklike-plugin .window_count {
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#docklike-plugin button + button {
+  margin-left: -2px;
+}

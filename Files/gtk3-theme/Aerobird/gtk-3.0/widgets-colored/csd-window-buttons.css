@@ -1,0 +1,172 @@
+/* minimize button */
+button.minimize {
+	margin-left: 0px;
+	margin-right: -4px;
+	margin-top: -16px;
+	min-height: 18px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	color: white;
+	-gtk-icon-shadow: 0 1px #707070, 1px 0px #707070, 0 -1px #707070, -1px 0 #707070;
+} 
+
+button.minimize, button.minimize:active {
+	background-image: linear-gradient(to bottom, #c3d4e7, #bed3e8 50%, #98b1cc 51%, #b7d0e9); 
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.minimize:hover {
+	background-image: linear-gradient(to bottom, #aad5f3, #81c0ea 50%, #2d73a3 51%, #24c6eb); 
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.minimize:backdrop {
+	background-image: linear-gradient(to bottom, #bdcbda, #cedceb); 
+	background-color: #bed4e9;
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.minimize:active:hover {
+	background-image: linear-gradient(to bottom, #7f9aac, #5d778c 50%, #203b52 51%, #27c9c8); 	
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+/* maximize button */
+button.maximize {
+	margin-left: -3px;
+	margin-right: -3px;
+	margin-top: -16px;
+	min-height: 18px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-radius: 0px;
+	color: white;
+	-gtk-icon-shadow: 0 1px #707070, 1px 0px #707070, 0 -1px #707070, -1px 0 #707070;
+}
+
+button.maximize, button.maximize:active {
+	background-image: linear-gradient(to bottom, #c3d4e7, #bed3e8 50%, #98b1cc 51%, #b7d0e9); 
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.maximize:hover {
+	background-image: linear-gradient(to bottom, #aad5f3, #81c0ea 50%, #2d73a3 51%, #24c6eb); 
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.maximize:backdrop {
+	background-image: linear-gradient(to bottom, #bdcbda, #cedceb); 
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.maximize:active:hover {
+	background-image: linear-gradient(to bottom, #7f9aac, #5d778c 50%, #203b52 51%, #27c9c8); 	
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+/* close button */
+button.close {
+	margin-left: -4px;
+	margin-right: 0px;
+	margin-top: -16px;
+	min-height: 18px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	color: white;
+	-gtk-icon-shadow: 0 1px #707070, 1px 0px #707070, 0 -1px #707070, -1px 0 #707070;
+}
+
+button.close, button.close:active {
+	background-image: linear-gradient(to bottom, #e9a99c, #e09587 50%, #b8432c 51%, #d27e6f);
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.close:hover {
+	background-image: linear-gradient(to bottom, #fcc8bf, #faa89a 50%, #d22302 51%, #e6934d);
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.close:backdrop {
+	background-image: linear-gradient(to bottom, #bdcbda, #cedceb);
+	background-color: #bed4e9;
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
+
+button.close:active:hover {
+	background-image: linear-gradient(to bottom, #c99e87, #bb8168 50%, #831800 51%, #be9049);
+	border-color: #707070;
+	box-shadow:
+		inset 0 1px rgba(255, 255, 255, 0.5),
+		inset 0 -1px rgba(255, 255, 255, 0.5),
+		inset 1px 0 rgba(255, 255, 255, 0.5),
+		inset -1px 0px rgba(255, 255, 255, 0.5);
+}
