@@ -93,7 +93,8 @@ run_root() {
 
 apt_install() {
     command -v apt-get >/dev/null 2>&1 || return 1
-    run_root apt-get install -y "$@"
+    info "Esperando hasta 120 segundos si el gestor de paquetes está ocupado"
+    run_root apt-get -o DPkg::Lock::Timeout=120 install -y "$@"
 }
 
 plugin_present() {
@@ -133,8 +134,10 @@ install_kesu() {
 install_docklike() {
     plugin_present docklike && return 0
     if command -v apt-cache >/dev/null 2>&1 && apt-cache show xfce4-docklike-plugin >/dev/null 2>&1; then
-        apt_install xfce4-docklike-plugin
-        return
+        if apt_install xfce4-docklike-plugin; then
+            return 0
+        fi
+        info "Falló el paquete de Docklike; se intentará compilarlo"
     fi
     command -v git >/dev/null 2>&1 || apt_install git
     apt_install build-essential xfce4-dev-tools pkg-config libgtk-3-dev \
