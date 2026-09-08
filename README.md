@@ -1,4 +1,5 @@
 # Win2-7 Nostalgia Edition
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c0e33c0e-d205-41dd-a9a6-7eb816ea69cb" />
 
 Recuperación moderna para XFCE del clásico **Win2-7 Pack**, con una instalación legible y reversible.
 
@@ -6,7 +7,7 @@ Recuperación moderna para XFCE del clásico **Win2-7 Pack**, con una instalaci�
 
 ## Incluye
 
-- Temas **Aerobird** y **Aerobird-Blue** para GTK 2, GTK 3, GTK 4 y XFWM4.
+- Temas **Aerobird** y **Aerobird-Blue** para GTK 2, GTK 3, GTK 4 y XFWM4; **Aerobird** es el perfil predeterminado por ser el más cercano al Win2-7 original.
 - Tema de iconos moderno **Windows-7** y archivos históricos **Win2-7Libre** y **Win2-7**.
 - Cursores **aero-drop**, sonidos FreeDesktop y fondo clásico.
 - Temas Win2-7 para [Angujanú](https://github.com/Renetrox/Angujanu).
@@ -25,7 +26,7 @@ chmod +x install.sh uninstall.sh
 
 Valores predeterminados:
 
-- GTK/XFWM: `Aerobird-Blue`
+- GTK/XFWM: `Aerobird`
 - iconos: `Windows-7`
 - cursor: `aero-drop`
 - menú Angujanú: `Win2-7Blue`
@@ -91,6 +92,17 @@ Files/
 
 El instalador original estaba dirigido a Ubuntu y GNOME 2 y modificaba numerosos componentes del sistema. Su código Python 2 y las operaciones globales inseguras fueron retirados del árbol activo; continúan disponibles en el historial del repositorio.
 
+## Créditos
+
+- **Juan de Jesús (juandejesuss)**: creador del Win2-7 Pack original,
+  cuya idea, recursos y experiencia de transformación inspiran esta edición.
+- **jmoney777**: creador de AeroBird y AeroBird-Blue para XFCE.
+- **B00merang Artwork**: adaptación y mantenimiento moderno del tema
+  de iconos Windows-7 basado en los iconos originales de Win2-7.
+- **nsz32 y colaboradores**: desarrollo de Docklike Taskbar.
+- **Renetrox**: restauración, adaptación para XFCE e integración con
+  Angujanú y Kesú.
+  
 ## Licencias y créditos
 
 Esta edición combina material del Win2-7 Pack histórico y trabajos posteriores. Las licencias de cada recurso heredado deben documentarse individualmente antes de una publicación formal. Angujanú, Kesú y Docklike son proyectos separados y no se incluyen dentro de este repositorio.
